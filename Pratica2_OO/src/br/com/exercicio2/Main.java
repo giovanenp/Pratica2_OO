@@ -15,7 +15,7 @@ public class Main {
     meses = entrada.nextInt();
 
     Rendimento aplicacao = new Rendimento(investimento, taxaJuros, meses);    
-    aplicacao.calculaRendimento();
     System.out.println(aplicacao.mostraRendimento());
+    aplicacao.calculaRendimento();
   }
 }
