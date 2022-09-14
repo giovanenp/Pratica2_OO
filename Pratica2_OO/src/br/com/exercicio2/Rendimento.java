@@ -6,7 +6,7 @@ public class Rendimento {
   private int meses;
 
   public Rendimento(double valor, double taxaJuros, int meses) {
-    this.taxaJuros = (taxaJuros / 100);
+    this.taxaJuros = taxaJuros;
     this.meses = meses;
     this.valorInicial = valor;
   }
@@ -39,7 +39,7 @@ public class Rendimento {
     double totalRendimento = this.valorInicial;    
 
     for (int i = 1; i <= meses; i++) {
-      totalRendimento += (totalRendimento * taxaJuros);
+      totalRendimento += (totalRendimento * taxaJuros) / 100;
       System.out.printf("\nMês %d - rendimento/mês %.2f", i, totalRendimento);
     }
   }
