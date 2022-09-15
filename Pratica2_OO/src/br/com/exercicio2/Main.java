@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    double investimento, taxaJuros;    
+    double investimento, taxaJuros;
     int meses;
     Scanner entrada = new Scanner(System.in);
+
     System.out.print("Informe o valor inicial para investimento: ");
     investimento = entrada.nextDouble();
     System.out.print("Informe a taxa de Juros mensal da aplicação: ");
@@ -14,7 +15,7 @@ public class Main {
     System.out.print("Informe quantos meses o valor ficará aplicado: ");
     meses = entrada.nextInt();
 
-    Rendimento aplicacao = new Rendimento(investimento, taxaJuros, meses);    
+    Rendimento aplicacao = new Rendimento(investimento, taxaJuros, meses);
     System.out.println(aplicacao.mostraRendimento());
     aplicacao.calculaRendimento();
   }

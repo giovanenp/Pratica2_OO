@@ -1,6 +1,6 @@
 package br.com.exercicio2;
 
-public class Rendimento {  
+public class Rendimento {
   private double valorInicial;
   private double taxaJuros;
   private int meses;
@@ -36,17 +36,18 @@ public class Rendimento {
   }
 
   public void calculaRendimento() {
-    double totalRendimento = this.valorInicial;    
+    double totalRendimento = getValorInicial();
 
-    for (int i = 1; i <= meses; i++) {
-      totalRendimento += (totalRendimento * taxaJuros) / 100;
-      System.out.printf("\nMês %d - rendimento/mês %.2f", i, totalRendimento);
+    for (int i = 0; i < getMeses(); i++) {
+      totalRendimento += (totalRendimento * getTaxaJuros()) / 100;
+      System.out.printf("\nMês %d - rendimento/mês %.2f", (i + 1), totalRendimento);
     }
   }
 
   public String mostraRendimento() {
-    return "Investimento: " + this.valorInicial + "\nTaxa do Rendimento: " + this.taxaJuros + "% a/m \nNúmero de meses: "
-        + this.meses; 
+    return "Investimento: " + getValorInicial() + "\nTaxa do Rendimento: " + getTaxaJuros()
+        + "% a/m \nNúmero de meses: "
+        + getMeses();
   }
 
 }
